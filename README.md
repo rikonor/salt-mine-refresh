@@ -1,6 +1,6 @@
 ### Salt runner / **mine.remove_stale**
 
-mine.remove_salt is a Salt runner for cleaning out stale mine data.
+mine.remove_salt is a Salt runner for cleaning out stale mine data. It will also emit the ids of the stale minions.
 
 #### Installation
 
