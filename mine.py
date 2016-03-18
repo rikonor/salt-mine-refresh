@@ -55,8 +55,9 @@ def remove_stale(time, update=False, alert=True):
     # Remove stale mine data
     remove_stale_command = [
         "find", "/var/cache/salt/master/minions/",
-        "-type", "f", "-name", "mine.p", "!",
+        "-type", "f", "-name", "data.p", "!",
         "-newermt", "-{} {}".format(n_time, t_time),
+        "-printf", "%h",
         "-exec", "bash", "-c", "rm {}", ";"
     ]
 
